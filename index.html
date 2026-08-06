@@ -670,7 +670,25 @@
       .pillars { grid-template-columns: 1fr; }
       .hero-cta { flex-direction: column; align-items: center; }
     }
-  </style>
+  
+/* ── CATALOG ── */
+.catalog-section{padding:6rem 0;background:var(--surface);}
+.catalog-stats{display:flex;gap:3rem;margin:2rem 0 3rem;flex-wrap:wrap;}
+.catalog-stat{display:flex;flex-direction:column;}
+.catalog-stat .stat-number{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:600;color:var(--orange);line-height:1;}
+.catalog-stat .stat-label{font-size:0.85rem;color:var(--muted-dark);text-transform:uppercase;letter-spacing:0.05em;margin-top:0.3rem;}
+.catalog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;}
+.catalog-card{display:block;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:2rem;text-decoration:none;transition:transform 0.25s ease,box-shadow 0.25s ease;}
+.catalog-card:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,0.08);border-color:var(--orange);}
+.catalog-icon{font-size:2.2rem;margin-bottom:1rem;}
+.catalog-card h3{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--ink);margin-bottom:0.5rem;}
+.catalog-card p{font-size:0.92rem;color:var(--muted-dark);line-height:1.5;margin-bottom:1rem;}
+.catalog-cta{font-size:0.85rem;font-weight:600;color:var(--orange);}
+/* ── WHATSAPP FLOAT ── */
+.wa-float{position:fixed;bottom:24px;right:24px;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 16px rgba(0,0,0,0.25);z-index:999;transition:transform 0.2s ease;}
+.wa-float:hover{transform:scale(1.08);}
+.wa-float svg{width:28px;height:28px;fill:#fff;}
+</style>
 </head>
 <body>
 
@@ -684,7 +702,9 @@
       <li><a href="#about" data-en="About" data-es="Nosotros">About</a></li>
       <li><a href="#services" data-en="Services" data-es="Servicios">Services</a></li>
       <li><a href="#markets" data-en="Markets" data-es="Mercados">Markets</a></li>
-      <li><a href="#contact" data-en="Contact" data-es="Contacto">Contact</a></li>
+      <li><a href="#catalog" data-en="Catalog" data-es="Catálogo">Catalog</a></li>
+        <li><a href="#wholesale-order" data-en="Wholesale Order" data-es="Compra al Mayor">Wholesale Order</a></li>
+        <li><a href="#contact" data-en="Contact" data-es="Contacto">Contact</a></li>
     </ul>
     <div class="lang-switcher">
       <button class="lang-btn active" onclick="setLang('en')">EN</button>
@@ -840,6 +860,58 @@
 </section>
 
 <!-- ── MARKETS ── -->
+<!-- ── CATALOG ── -->
+<section id="catalog" class="catalog-section">
+  <div class="container">
+    <p class="section-label reveal" data-en="Our Product Lines" data-es="Nuestras Líneas de Producto">Our Product Lines</p>
+    <h2 class="section-title reveal" data-en="Wholesale Catalog" data-es="Catálogo Mayorista">Wholesale Catalog</h2>
+    <p class="section-desc reveal" data-en="Six core categories, sourced and shipped in bulk to distributors across the Americas." data-es="Seis categorías principales, adquiridas y enviadas al mayoreo a distribuidores en toda América.">Six core categories, sourced and shipped in bulk to distributors across the Americas.</p>
+    <div class="catalog-stats reveal">
+      <div class="catalog-stat"><span class="stat-number" data-count="6">0</span><span class="stat-label" data-en="Categories" data-es="Categorías">Categories</span></div>
+      <div class="catalog-stat"><span class="stat-number" data-count="14">0</span><span class="stat-label" data-en="Countries Served" data-es="Países Atendidos">Countries Served</span></div>
+      <div class="catalog-stat"><span class="stat-number" data-count="100">0</span><span class="stat-label" data-en="% Bulk Orders" data-es="% Pedidos al Mayor">% Bulk Orders</span></div>
+    </div>
+    <div class="catalog-grid">
+      <a href="#wholesale-order" class="catalog-card reveal">
+        <div class="catalog-icon">📱</div>
+        <h3 data-en="Consumer Electronics" data-es="Electrónica de Consumo">Consumer Electronics</h3>
+        <p data-en="Phones, accessories, audio and small appliances." data-es="Teléfonos, accesorios, audio y electrodomésticos pequeños.">Phones, accessories, audio and small appliances.</p>
+        <span class="catalog-cta" data-en="Request Quote →" data-es="Solicitar Cotización →">Request Quote →</span>
+      </a>
+      <a href="#wholesale-order" class="catalog-card reveal">
+        <div class="catalog-icon">👕</div>
+        <h3 data-en="Apparel & Footwear" data-es="Ropa y Calzado">Apparel & Footwear</h3>
+        <p data-en="Men's, women's and children's clothing and shoes." data-es="Ropa y calzado para hombre, mujer y niños.">Men's, women's and children's clothing and shoes.</p>
+        <span class="catalog-cta" data-en="Request Quote →" data-es="Solicitar Cotización →">Request Quote →</span>
+      </a>
+      <a href="#wholesale-order" class="catalog-card reveal">
+        <div class="catalog-icon">🥫</div>
+        <h3 data-en="Food & Beverage" data-es="Alimentos y Bebidas">Food & Beverage</h3>
+        <p data-en="Packaged foods, snacks and non-alcoholic beverages." data-es="Alimentos envasados, snacks y bebidas no alcohólicas.">Packaged foods, snacks and non-alcoholic beverages.</p>
+        <span class="catalog-cta" data-en="Request Quote →" data-es="Solicitar Cotización →">Request Quote →</span>
+      </a>
+      <a href="#wholesale-order" class="catalog-card reveal">
+        <div class="catalog-icon">🏭</div>
+        <h3 data-en="Industrial Supplies" data-es="Suministros Industriales">Industrial Supplies</h3>
+        <p data-en="Tools, hardware and safety equipment." data-es="Herramientas, ferretería y equipo de seguridad.">Tools, hardware and safety equipment.</p>
+        <span class="catalog-cta" data-en="Request Quote →" data-es="Solicitar Cotización →">Request Quote →</span>
+      </a>
+      <a href="#wholesale-order" class="catalog-card reveal">
+        <div class="catalog-icon">💄</div>
+        <h3 data-en="Beauty & Personal Care" data-es="Belleza y Cuidado Personal">Beauty & Personal Care</h3>
+        <p data-en="Cosmetics, skincare and personal hygiene products." data-es="Cosméticos, cuidado de la piel y productos de higiene personal.">Cosmetics, skincare and personal hygiene products.</p>
+        <span class="catalog-cta" data-en="Request Quote →" data-es="Solicitar Cotización →">Request Quote →</span>
+      </a>
+      <a href="#wholesale-order" class="catalog-card reveal">
+        <div class="catalog-icon">🏠</div>
+        <h3 data-en="Home & Household Goods" data-es="Artículos para el Hogar">Home & Household Goods</h3>
+        <p data-en="Kitchenware, cleaning supplies and home essentials." data-es="Utensilios de cocina, artículos de limpieza y esenciales del hogar.">Kitchenware, cleaning supplies and home essentials.</p>
+        <span class="catalog-cta" data-en="Request Quote →" data-es="Solicitar Cotización →">Request Quote →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
 <section id="markets" class="markets-bg">
   <div class="markets-bg-img"></div>
   <div class="container">
@@ -867,6 +939,78 @@
 </section>
 
 <!-- ── CONTACT ── -->
+<!-- ── WHOLESALE ORDER ── -->
+<section id="wholesale-order">
+  <div class="container">
+    <p class="section-label reveal" data-en="Buy in Bulk" data-es="Compre al Mayor">Buy in Bulk</p>
+    <h2 class="section-title reveal" data-en="Request a Wholesale Order" data-es="Solicite una Compra al Mayor">Request a Wholesale Order</h2>
+    <p class="section-desc reveal" data-en="Tell us what you need and how much. Our team will prepare a quote with pricing, minimum order quantities, and shipping options to your country." data-es="Cuéntenos qué necesita y en qué cantidad. Nuestro equipo preparará una cotización con precios, cantidades mínimas de pedido y opciones de envío a su país.">Tell us what you need and how much. Our team will prepare a quote with pricing, minimum order quantities, and shipping options to your country.</p>
+    <div class="contact-wrapper">
+      <div class="contact-info reveal">
+        <h3 data-en="Prefer to Talk Directly?" data-es="¿Prefiere Hablar Directamente?">Prefer to Talk Directly?</h3>
+        <p data-en="For large or urgent orders, contact us directly by WhatsApp or email and we will respond the same business day." data-es="Para pedidos grandes o urgentes, contáctenos directamente por WhatsApp o correo y responderemos el mismo día hábil.">For large or urgent orders, contact us directly by WhatsApp or email and we will respond the same business day.</p>
+        <div class="contact-btns">
+          <a href="https://wa.me/17863750758" target="_blank" class="btn btn-primary">
+            <span data-en="Chat on WhatsApp" data-es="Chatear por WhatsApp">Chat on WhatsApp</span>
+          </a>
+          <a href="mailto:purchasing@lcwholesalegroup.com" class="btn btn-primary">
+            <span data-en="Send Email" data-es="Enviar Correo">Send Email</span>
+          </a>
+        </div>
+      </div>
+      <div class="reveal">
+        <form action="https://formspree.io/f/xyknqjnz" method="POST">
+          <div class="form-group">
+            <label class="form-label" data-en="Company Name *" data-es="Nombre de la Empresa *">Company Name *</label>
+            <input type="text" name="company_name" class="form-input" placeholder="Your Company LLC" required/>
+          </div>
+          <div class="form-group">
+            <label class="form-label" data-en="Contact Name *" data-es="Nombre de Contacto *">Contact Name *</label>
+            <input type="text" name="contact_name" class="form-input" placeholder="John Smith" required/>
+          </div>
+          <div class="form-group">
+            <label class="form-label" data-en="Email Address *" data-es="Correo Electrónico *">Email Address *</label>
+            <input type="email" name="email" class="form-input" placeholder="you@company.com" required/>
+          </div>
+          <div class="form-group">
+            <label class="form-label" data-en="Phone / WhatsApp" data-es="Teléfono / WhatsApp">Phone / WhatsApp</label>
+            <input type="text" name="phone" class="form-input" placeholder="+1 786 000 0000"/>
+          </div>
+          <div class="form-group">
+            <label class="form-label" data-en="Product Category *" data-es="Categoría de Producto *">Product Category *</label>
+            <select class="form-select form-input" name="category" required>
+              <option value="" data-en="Select a category" data-es="Seleccione una categoría">Select a category</option>
+              <option value="Consumer Electronics" data-en="Consumer Electronics" data-es="Electrónica de Consumo">Consumer Electronics</option>
+              <option value="Apparel & Footwear" data-en="Apparel & Footwear" data-es="Ropa y Calzado">Apparel & Footwear</option>
+              <option value="Food & Beverage" data-en="Food & Beverage" data-es="Alimentos y Bebidas">Food & Beverage</option>
+              <option value="Industrial Supplies" data-en="Industrial Supplies" data-es="Suministros Industriales">Industrial Supplies</option>
+              <option value="Beauty & Personal Care" data-en="Beauty & Personal Care" data-es="Belleza y Cuidado Personal">Beauty & Personal Care</option>
+              <option value="Home & Household Goods" data-en="Home & Household Goods" data-es="Artículos para el Hogar">Home & Household Goods</option>
+              <option value="Other" data-en="Other" data-es="Otro">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" data-en="Estimated Quantity" data-es="Cantidad Estimada">Estimated Quantity</label>
+            <input type="text" name="quantity" class="form-input" placeholder="e.g. 500 units"/>
+          </div>
+          <div class="form-group">
+            <label class="form-label" data-en="Destination Country *" data-es="País de Destino *">Destination Country *</label>
+            <input type="text" name="destination_country" class="form-input" placeholder="e.g. Colombia" required/>
+          </div>
+          <div class="form-group">
+            <label class="form-label" data-en="Message" data-es="Mensaje">Message</label>
+            <textarea class="form-textarea" name="message" placeholder="Any additional details about your order..."></textarea>
+          </div>
+          <input type="hidden" name="_subject" value="New Wholesale Order Request - LC Wholesale Group LLC"/>
+          <input type="hidden" name="_template" value="table"/>
+          <input type="hidden" name="_captcha" value="false"/>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;background:var(--orange);" data-en="Request Quote →" data-es="Solicitar Cotización →">Request Quote &rarr;</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="contact">
   <div class="container">
     <p class="section-label reveal" data-en="Get In Touch" data-es="Comuníquese con Nosotros">Get In Touch</p>
@@ -1077,6 +1221,36 @@
   }
 </script>
 <div style="position:fixed;bottom:20px;right:20px;font-size:14px;color:#fff;">Phone: 786-375-0758</div>
+<a href="https://wa.me/17863750758?text=Hola%2C%20me%20interesa%20hacer%20un%20pedido%20al%20mayor" target="_blank" class="wa-float" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.79.47 3.55 1.36 5.1L2 22l5.13-1.44a9.9 9.9 0 004.91 1.29h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm0 18.02h-.01a8.1 8.1 0 01-4.14-1.13l-.3-.18-3.05.86.82-2.97-.19-.31a8.15 8.15 0 01-1.24-4.38c0-4.5 3.66-8.15 8.15-8.15 4.5 0 8.15 3.66 8.15 8.15-.01 4.5-3.66 8.11-8.19 8.11zm4.47-6.11c-.24-.12-1.45-.71-1.68-.8-.22-.08-.39-.12-.55.12-.16.24-.63.8-.78.97-.14.16-.29.18-.53.06-.24-.12-1.03-.38-1.96-1.21-.72-.65-1.21-1.44-1.35-1.68-.14-.24-.02-.37.11-.49.11-.11.24-.29.36-.43.12-.14.16-.24.24-.4.08-.16.04-.31-.02-.43-.06-.12-.55-1.32-.75-1.81-.2-.48-.4-.41-.55-.42-.14-.01-.31-.01-.47-.01-.16 0-.43.06-.65.31-.22.24-.86.84-.86 2.04 0 1.2.88 2.37 1 2.53.12.16 1.73 2.64 4.19 3.7.59.25 1.04.4 1.4.51.59.19 1.12.16 1.54.1.47-.07 1.45-.59 1.65-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28z"/></svg>
+</a>
+<script>
+(function(){
+  var counters=document.querySelectorAll('.stat-number[data-count]');
+  var done=false;
+  function animate(){
+    if(done)return;
+    var trigger=document.getElementById('catalog');
+    if(!trigger)return;
+    var rect=trigger.getBoundingClientRect();
+    if(rect.top<window.innerHeight-100){
+      done=true;
+      counters.forEach(function(el){
+        var target=parseInt(el.getAttribute('data-count'),10);
+        var current=0;
+        var step=Math.max(1,Math.ceil(target/40));
+        var timer=setInterval(function(){
+          current+=step;
+          if(current>=target){current=target;clearInterval(timer);}
+          el.textContent=current;
+        },30);
+      });
+    }
+  }
+  window.addEventListener('scroll',animate);
+  animate();
+})();
+</script>
 </body>
 </html>
 
